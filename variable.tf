@@ -29,20 +29,44 @@ variable "private_subnet_cidr_2" {
   default     = "10.0.4.0/24"
 }
 
+# Private Subnet CIDR 블록 3
+variable "private_subnet_cidr_3" {
+  description = "CIDR block for the first private subnet"
+  default     = "10.0.5.0/24"
+}
+
+# Private Subnet CIDR 블록 4
+variable "private_subnet_cidr_4" {
+  description = "CIDR block for the second private subnet"
+  default     = "10.0.6.0/24"
+}
+
 # Internet Gateway Name
 variable "internet_gateway_name" {
   description = "Name of the Internet Gateway"
   default     = "3-tier_Internet_Gateway"
 }
 
-# Elastic IP 이름 (NAT Gateway용)
-variable "nat_eip_name" {
-  description = "Name for the Elastic IP used by NAT Gateway"
-  default     = "3-tier-NAT-EIP"
+
+# Web 서버 설정
+variable "web_ami_id" {
+  description = "AMI ID for the web server instances"
+  default     = "ami-012967cc5a8c9f891"
 }
 
-# NAT Gateway 이름
-variable "nat_gw_name" {
-  description = "Name for the NAT Gateway"
-  default     = "3-tier-NAT-Gateway"
+variable "web_instance_type" {
+  description = "Instance type for the web server instances"
+  default     = "t2.micro"
 }
+
+# App 서버 설정
+variable "app_ami_id" {
+  description = "AMI ID for the app server instances"
+  default     = "ami-012967cc5a8c9f891"
+}
+
+variable "app_instance_type" {
+  description = "Instance type for the app server instances"
+  default     = "t2.micro"
+}
+

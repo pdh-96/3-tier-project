@@ -1,4 +1,4 @@
-# Public Routing Table 생성
+# Private Routing Table 생성
 resource "aws_route_table" "private" {
   vpc_id = aws_vpc.main.id
 
