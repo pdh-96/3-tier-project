@@ -8,3 +8,7 @@ resource "aws_vpc" "main" {
     Name = "3-tier_VPC"
   }
 }
+
+
+
+#####
